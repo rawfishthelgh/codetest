@@ -1,4 +1,5 @@
 n,m=map(int,input().split())
+#행렬 입력
 a=[list(map(int,list(input()))) for i in range(n)]
 b=[list(map(int,list(input()))) for i in range(n)]
 cnt=0

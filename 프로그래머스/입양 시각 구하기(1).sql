@@ -1,0 +1,5 @@
+SELECT hour(DATETIME) HOUR, count(DATETIME) count
+from ANIMAL_OUTS
+where HOUR(DATETIME)>=9 and HOUR(DATETIME)<20
+group by HOUR(DATETIME)
+order by HOUR

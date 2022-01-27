@@ -36,4 +36,3 @@ for _ in range(t):
       if dfs(i,j)==True:
         cnt+=1
   print(cnt)
-

@@ -4,7 +4,7 @@ length=[]
 for _ in range(k):
   length.append(int(sys.stdin.readline()))
 length.sort()
-start=0
+start=1
 end=max(length)
 result=0
 

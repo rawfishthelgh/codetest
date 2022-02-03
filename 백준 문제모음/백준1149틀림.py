@@ -1,21 +1,15 @@
 import sys
 input=sys.stdin.readline
 n=int(input())
-dp=[0]*(n+1)
-costs=[[1001,1001,1001,0]]
+costs=[]
 for _ in range(n):
   r,g,b=map(int,input().split())
   costs.append([r,g,b])
+#같은 인덱스가 아닌 것 중 더 비용이 적은 값을 더해나감
+for i in range(1,n):
+  costs[i][0]=min(costs[i-1][1],costs[i-1][2])+costs[i][0]
+  costs[i][1]=min(costs[i-1][0],costs[i-1][2])+costs[i][1]
+  costs[i][2]=min(costs[i-1][0],costs[i-1][1])+costs[i][2]
 
 print(costs)
-buf=0
-for i in range(1,n+1):
-  mincost=min(costs[i])
-  if costs[i].index(mincost)==costs[i-1].index(buf):
-    a=sorted(costs[i])
-    mincost=a[1]
-    print(a[1])
-  dp[i]=dp[i-1]+mincost
-  buf=mincost
-
-print(dp)
+print(min(costs[n-1]))

@@ -17,6 +17,6 @@ for i in range(n):
   elif i==2:
     d.append(max(floorlist[0]+floorlist[2],floorlist[1]+floorlist[2]))
   else:
-    d.append(max(d[i-2]+floorlist[i],d[i-3]+floorlist[i]+floorlist[i-1]))
+    d.append(max(d[i-2]+floorlist[i],d[i-3]+floorlist[i-1]+floorlist[i]))
 
 print(d.pop())

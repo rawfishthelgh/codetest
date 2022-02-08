@@ -13,7 +13,7 @@ graph=[[] for i in range(n+1)]
 distance=[INF]*(n+1)
 
 #모든 간선 정보 입력받기
-for _ in range(m):
+for i in range(m):
   a,b,c=map(int,input().split())
   #a번노드에서 b로 가는 비용은 c다
   graph[a].append((b,c))

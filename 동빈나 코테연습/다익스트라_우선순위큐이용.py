@@ -18,17 +18,6 @@ for i in range(m):
   #a번노드에서 b로 가는 비용은 c다
   graph[a].append((b,c))
 
-# #방문하지 않은 노드 중, 가장 최단 거리가 짧은 노드번호 반환
-# def get_smallest_node():
-#   min_value= INF
-#   index=0 #가장 최단 거리가 짧은 노드 선택
-#   for i in range(1,n+1):
-#     #방문하지 않은 노드 중에서 가장 최단거리가 짧은 노드의 번호를 반환
-#     if distance[i]<min_value and not visited[i]:
-#       min_value = distance[i]
-#       index = i
-#   return index
-
 def dijkstra(start):
   q=[]
   #시작 노드에 대해 초기화:0 큐에 삽입

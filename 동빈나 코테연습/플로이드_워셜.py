@@ -19,7 +19,8 @@ for a in range(1,n+1):
 for _ in range(m):
   #a에서 b로 가는 비용 c
   a,b,c=map(int,input().split())
-  graph[a][b]=c
+  if graph[a][b]>c:
+    graph[a][b]=c
 
 #점화식에 따라 플로이드 워셜 알고리즘 수행
 for k in range(1,n+1):

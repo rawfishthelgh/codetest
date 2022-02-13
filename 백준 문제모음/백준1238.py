@@ -1,7 +1,7 @@
 import sys
 import heapq
 input=sys.stdin.readline
-#노드의 개수, 간선의 개수
+#노드의 개수,  간선의 개수
 n,m,end=map(int,input().split())
 
 INF= int(1e9) #10억, 무한 의미

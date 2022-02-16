@@ -19,6 +19,10 @@ def union_parent(parent,a,b):
 v,e = map(int,input().split())
 parent=[0]*(v+1) #1부터 v까지 모든 노드에 대해 부모 정보를 담을 수 있도록 리스트 만듦
 
+# 모든 간선을 담을 리스트와, 최종 비용을 담을 변수
+edges=[]
+result=0
+
 #부모 테이블상에서, 부모를 자기 자신으로 초기화
 for i in range(1,v+1):
     parent[i]=i

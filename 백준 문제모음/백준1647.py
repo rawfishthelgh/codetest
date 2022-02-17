@@ -37,7 +37,8 @@ for _ in range(e):
 
 #간선을 비용순으로 정렬
 edges.sort()
-
+#포함된 간선 길이
+line=[]
 #간선을 하나씩 확인하며
 for edge in edges:
     cost,a,b= edge
@@ -45,5 +46,6 @@ for edge in edges:
     if find_parent(parent,a) != find_parent(parent,b):
         union_parent(parent,a,b)
         result += cost
+        line.append(cost)
 
-print(result)
+print(result-line.pop())

@@ -26,7 +26,7 @@ for i in range(1,v+1):
 cycle=False #사이클 발생 여부
 
 for i in range(e):
-    a,b=map(int,intpue().split())
+    a,b=map(int,input().split())
     #사이클이 발생한 경우 종료(두 원소가 같은 집합에 속함)
     if find_parent(parent,a) == find_parent(parent,b):
         cycle=True

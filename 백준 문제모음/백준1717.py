@@ -20,13 +20,6 @@ def find_parent(parent,x):
         return parent[x]
     return parent[x]
 
-
-def find(a,b):
-  if find_parent(parent,a)==find_parent(parent,b):
-    return "yes"
-  else:
-    return "no"
-      
 #노드의 개수와 간선(union연산)의 개수 입력 받기
 v,e = map(int,input().split())
 parent=[0]*(v+1) #1부터 v까지 모든 노드에 대해 부모 정보를 담을 수 있도록 리스트 만듦
@@ -41,7 +34,8 @@ for i in range(e):
   n,a,b=map(int,input().split())
   if n==0:
     union_parent(parent,a,b)
-    continue
   else:
-    print(find(a,b))
-    continue
+    if find_parent(parent,a)==find_parent(parent,b):
+        print("yes")
+    else:
+        print("no")

@@ -22,8 +22,8 @@ def solution(primenum):
     from math import gcd
     ans=primenum[0]
     # 두 수를 곱한 것을 두 수의 최대공약수로 나누면 최소공배수
-    for num in primenum:
-      ans=(ans*num)//gcd(ans, num)
+    for i in range(1,len(primenum)):
+      ans=(ans*primenum[i])//gcd(ans, primenum[i])
     return ans
 
 #솔루션 함수 이용 최소공배수 도출

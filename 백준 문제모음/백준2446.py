@@ -11,7 +11,7 @@ mlist.append(list(num))
 for i in range(1,n):
   nownum=copy.deepcopy(mlist[i-1])
   nownum[i-1]=' '
-  nownum[-i]=' '
+  del nownum[len(nownum)-1]
   mlist.append(nownum)
 for i in range(n-2,-1,-1):
   nownum=copy.deepcopy(mlist[i])
